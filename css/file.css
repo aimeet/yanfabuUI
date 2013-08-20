@@ -1,0 +1,109 @@
+@charset "UTF-8";
+.doc-bar {
+	line-height: 28px;
+	margin-bottom: 30px;
+}
+/*-- 文库列表 --*/
+.doc-list li {	margin-top: 10px;line-height: 28px; }
+.doc-list li a { font-size: 14px; }
+.doc-list-min li a { font-size: 12px; }
+.doc-list .num { float: right; font-size: 12px; }
+
+.side-search .bootstrap-select{ position: absolute; left: -120px; }
+
+.breadcrumb-nav .bootstrap-select > .btn { border: #0562b7 1px solid; }
+.doc-up { background: url(../upload/docup.png) no-repeat 0 bottom; text-align: center; padding: 30px 15px; height: 208px; }
+  .doc-up h3 { line-height: 39px;}
+    .doc-up .btn-success { margin: 10px 0; }
+	
+/*--field condition--*/
+.condition {
+	border: 1px solid #0168b7;
+	border-color: #0168b7 #ccc #ccc;
+	border-width:2px 1px 1px 1px;
+}
+.condition dl.hd_sel_list {
+	padding: 10px 5px;
+	border-top: 2px solid #82bbb9;
+	border-bottom: 1px solid #e0e0e0;
+}
+.condition .hd_sel_list .choosing {
+	line-height: 24px;
+}
+.condition .hd_sel_list .choosing span, .choosing span {
+	border: 1px solid #0168b7;
+	color: #0168b7;
+	margin-right: 5px;
+	height: 16px;
+	background: #f2fbff;
+	padding: 3px 16px 0 2px;
+	line-height: 15px;
+	display: inline-block;
+	position: relative;
+	_margin-bottom: 5px;
+	line-height: 17px\9;
+}
+.condition .hd_sel_list .choosing span a,  .choosing span a {
+	overflow: hidden;
+	width: 11px;
+	height: 10px;
+	position: absolute;
+	top: 3px;
+	right: 2px;
+	padding-top: 2px;
+	background: #0168b7;
+	font: 8px/8px Helvetica, STHeiti;
+	text-align: center;
+	display: block;
+}
+.condition .hd_sel_list .choosing a, .choosing a {
+	color: #fff;
+}
+.attribute {
+}
+.attribute dl dt {
+	padding: 10px 15px 8px 10px;
+	color: #000;
+}
+.condition dl dt {
+	background: #f7faff;
+	border-bottom: 1px solid #ccc;
+}
+.attribute .bd_sel_list {
+	margin-top: -1px;
+	padding: 5px;
+}
+.attribute .bd_sel_list a, .attribute .bd_sel_list span {
+	line-height: 24px;
+	display: inline-block;
+	padding: 3px 0 0 10px;
+	width: 152px;
+}
+.attribute .bd_sel_list .attribute-name {
+	color: #333;
+}
+.attribute .bd_sel_list .attribute-val .J_chooseTips a {
+	color: #646464;
+	margin-right: 28px;
+	white-space: nowrap;
+}
+
+.fold   { height:10px; margin-bottom:10px; margin-top:-1px; }
+   .fold a { display:block; background:url(../images/arrow.png) no-repeat; width:82px; height:12px; margin:0 auto; overflow:hidden; text-indent:-3000px; }
+   .fold a.down-fold { background-position:0 0; }
+   .fold a.up-fold   { background-position:0 -511px; }
+
+ .nav-p .fr { margin:4px;}
+ .nav-p      { border:1px solid #ccc; height:32px; background-color:#EEE; padding-right:5px; }
+ .nav-p .bootstrap-select { margin-top:3px; }
+ .time-turn li { float:left; border-right:1px solid #e5e5e5; }
+	.time-turn li a { line-height:32px; color:#666; padding:0 10px; height:32px; display:block; }
+	.time-turn li.active a { background-color:#ebebeb; color:#0168b7; background-color:rgba(235,235,235,.7) }
+
+ .search-field-panel {  padding:5px 10px; background-color:#f7faff; border:1px solid #ccc; border-bottom:1px solid #fff;}
+  .search-field-panel .s-wkipt { border-radius:0; height:16px; margin-right:-5px; }
+  .search-field-panel .wk-sbox { width:150px; overflow:hidden; }
+
+.doc-style-list { overflow:hidden; padding-top:3px; margin-bottom:5px; }
+	.doc-style-list li { float:left; margin-left:2.3%; }
+	.doc-style-list li input{ vertical-align:top; margin-right:5px; }

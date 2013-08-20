@@ -1,0 +1,186 @@
+ /*
+ * Explr v1.4
+ * jQuery Simple Tree Plugin
+ *
+ * Copyright 2010 Amatyr4n
+ * http://codecanyon.net/user/amatyr4n
+ *
+ * licensed under Envato licenses
+ * http://wiki.envato.com/support/legal-terms/licensing-terms/
+ */
+
+.explr-tree * {
+	margin: 0;
+	padding: 0;
+}
+
+.explr-tree, 
+.explr-tree ol,
+.explr-tree ul {
+	display: block;
+	font-size: 12px;
+	letter-spacing: normal;
+	line-height: 12px;
+	list-style: none;
+	margin: 0;
+	padding-bottom: 0;
+	padding-left: 20px;
+	padding-top: 5px;
+}
+
+.explr-tree {
+	background: #fff;
+}
+
+.explr-tree li {
+	background: url("../../images/tree/folder.png") 16px 2px no-repeat;
+	*background-position:16px 4px;
+	display: block;
+	position: relative;
+	white-space: nowrap;
+}
+
+.explr-tree li a {
+	color: #555;
+	margin-left: 30px;
+	padding: 3px 0 5px 8px;
+	text-decoration: none;
+}
+.explr-tree > ul > li > a { display: block; }
+
+.explr-tree li a:hover {
+	color: #ff0084;
+	text-decoration: underline;
+}
+
+.explr-line {
+	border-left: 1px dotted #999;
+	border-bottom: 1px dotted #999;
+	height: 22px;
+	position: absolute;
+	margin-left: 0;
+	margin-top: -12px;
+	width: 12px;
+}
+
+.explr-tree ol>li:first-child>.explr-line,
+.explr-tree ul>li:first-child>.explr-line {
+	margin-top: -8px;
+	height: 18px;
+}
+
+.explr-line-fix {
+	border-left: 1px dotted #999;
+}
+
+.explr-plus {
+	background: url("../../images/tree/plus.png") 0 0 no-repeat;
+	height: 16px;
+	margin-left: -8px;
+	margin-top: 2px;
+	position: absolute;
+	width: 40px;
+	z-index: 1;
+}
+
+.explr-minus { background-image: url("../../images/tree/busy.png"); }
+
+
+/* Menu icons: */
+.explr-tree .tree-text > li, .explr-tree li.tree-text { background-image: url("../../images/tree/attibutes.png"); }
+.explr-tree .tree-address > li, .explr-tree li.tree-address { background-image: url("../../images/tree/address.png"); }
+.explr-tree .tree-archives > li, .explr-tree li.tree-archives { background-image: url("../../images/tree/archives.png"); }
+.explr-tree .tree-badge > li, .explr-tree li.tree-badge { background-image: url("../../images/tree/bestseller.png"); }
+.explr-tree .tree-bank > li, .explr-tree li.tree-bank { background-image: url("../../images/tree/bank.png"); }
+.explr-tree .tree-basket > li, .explr-tree li.tree-basket { background-image: url("../../images/tree/basket.png"); }
+.explr-tree .tree-board > li, .explr-tree li.tree-board { background-image: url("../../images/tree/order.png"); }
+.explr-tree .tree-board2 > li, .explr-tree li.tree-board2 { background-image: url("../../images/tree/order-1.png"); }
+.explr-tree .tree-book > li, .explr-tree li.tree-book { background-image: url("../../images/tree/library.png"); }
+.explr-tree .tree-bookmark > li, .explr-tree li.tree-bookmark { background-image: url("../../images/tree/bookmark.png"); }
+.explr-tree .tree-business > li, .explr-tree li.tree-business { background-image: url("../../images/tree/business-contact.png"); }
+.explr-tree .tree-calendar > li, .explr-tree li.tree-calendar { background-image: url("../../images/tree/calendar.png"); }
+.explr-tree .tree-card > li, .explr-tree li.tree-card { background-image: url("../../images/tree/credit-card.png"); }
+.explr-tree .tree-card2 > li, .explr-tree li.tree-card2 { background-image: url("../../images/tree/my-account.png"); }
+.explr-tree .tree-chain > li, .explr-tree li.tree-chain { background-image: url("../../images/tree/link.png"); }
+.explr-tree .tree-chart > li, .explr-tree li.tree-chart { background-image: url("../../images/tree/statistics.png"); }
+.explr-tree .tree-check > li, .explr-tree li.tree-check { background-image: url("../../images/tree/check.png"); }
+.explr-tree .tree-clock > li, .explr-tree li.tree-clock { background-image: url("../../images/tree/full-time.png"); }
+.explr-tree .tree-comment > li, .explr-tree li.tree-comment { background-image: url("../../images/tree/comment.png"); }
+.explr-tree .tree-config > li, .explr-tree li.tree-config { background-image: url("../../images/tree/config.png"); }
+.explr-tree .tree-customers > li, .explr-tree li.tree-customers { background-image: url("../../images/tree/customers.png"); }
+.explr-tree .tree-cv > li, .explr-tree li.tree-cv { background-image: url("../../images/tree/cv.png"); }
+.explr-tree .tree-db > li, .explr-tree li.tree-db { background-image: url("../../images/tree/database.png"); }
+.explr-tree .tree-direction > li, .explr-tree li.tree-direction { background-image: url("../../images/tree/milestone.png"); }
+.explr-tree .tree-flag > li, .explr-tree li.tree-flag { background-image: url("../../images/tree/flag.png"); }
+.explr-tree .tree-folder > li, .explr-tree li.tree-folder { background-image: url("../../images/tree/folder.png"); }
+.explr-tree .tree-folder2 > li, .explr-tree li.tree-folder2 { background-image: url("../../images/tree/finished-work.png"); }
+.explr-tree .tree-folder3 > li, .explr-tree li.tree-folder3 { background-image: url("../../images/tree/upcoming-work.png"); }
+.explr-tree .tree-hand > li, .explr-tree li.tree-hand { background-image: url("../../images/tree/freelance.png"); }
+.explr-tree .tree-heart > li, .explr-tree li.tree-heart { background-image: url("../../images/tree/heart.png"); }
+.explr-tree .tree-help > li, .explr-tree li.tree-help { background-image: url("../../images/tree/consulting.png"); }
+.explr-tree .tree-home > li, .explr-tree li.tree-home { background-image: url("../../images/tree/home.png"); }
+.explr-tree .tree-lamp > li, .explr-tree li.tree-lamp { background-image: url("../../images/tree/lightbulb.png"); }
+.explr-tree .tree-left > li, .explr-tree li.tree-left { background-image: url("../../images/tree/sign-out.png"); }
+.explr-tree .tree-left2 > li, .explr-tree li.tree-left2 { background-image: url("../../images/tree/login.png"); }
+.explr-tree .tree-lock > li, .explr-tree li.tree-lock { background-image: url("../../images/tree/lock.png"); }
+.explr-tree .tree-mail > li, .explr-tree li.tree-mail { background-image: url("../../images/tree/contact.png"); }
+.explr-tree .tree-mail2 > li, .explr-tree li.tree-mail2 { background-image: url("../../images/tree/email.png"); }
+.explr-tree .tree-palette > li, .explr-tree li.tree-palette { background-image: url("../../images/tree/drawings.png"); }
+.explr-tree .tree-pencil > li, .explr-tree li.tree-pencil { background-image: url("../../images/tree/edit.png"); }
+.explr-tree .tree-pencil2 > li, .explr-tree li.tree-pencil2 { background-image: url("../../images/tree/pencil.png"); }
+.explr-tree .tree-phone > li, .explr-tree li.tree-phone { background-image: url("../../images/tree/phone.png"); }
+.explr-tree .tree-photo > li, .explr-tree li.tree-photo { background-image: url("../../images/tree/photography.png"); }
+.explr-tree .tree-print > li, .explr-tree li.tree-print { background-image: url("../../images/tree/print.png"); }
+.explr-tree .tree-project > li, .explr-tree li.tree-project { background-image: url("../../images/tree/project.png"); }
+.explr-tree .tree-refresh > li, .explr-tree li.tree-refresh { background-image: url("../../images/tree/refresh.png"); }
+.explr-tree .tree-right > li, .explr-tree li.tree-right { background-image: url("../../images/tree/sign-in.png"); }
+.explr-tree .tree-right2 > li, .explr-tree li.tree-right2 { background-image: url("../../images/tree/logout.png"); }
+.explr-tree .tree-showreel > li, .explr-tree li.tree-showreel { background-image: url("../../images/tree/showreel.png"); }
+.explr-tree .tree-star > li, .explr-tree li.tree-star { background-image: url("../../images/tree/star.png"); }
+.explr-tree .tree-tag > li, .explr-tree li.tree-tag { background-image: url("../../images/tree/tag.png"); }
+.explr-tree .tree-text2 > li, .explr-tree li.tree-text2 { background-image: url("../../images/tree/issue.png"); }
+.explr-tree .tree-text3 > li, .explr-tree li.tree-text3 { background-image: url("../../images/tree/future-projects.png"); }
+.explr-tree .tree-text4 > li, .explr-tree li.tree-text4 { background-image: url("../../images/tree/old-versions.png"); }
+.explr-tree .tree-user > li, .explr-tree li.tree-user { background-image: url("../../images/tree/user.png"); }
+.explr-tree .tree-world > li, .explr-tree li.tree-world { background-image: url("../../images/tree/world.png"); }
+.explr-tree .tree-zoom > li, .explr-tree li.tree-zoom { background-image: url("../../images/tree/zoom.png"); }
+
+
+/* IE Hack Fixes: */
+
+.explr-ie, 
+.explr-ie ol,
+.explr-ie ul {
+	margin-left: 4px;
+	padding-left: 16px;
+	position:static;
+}
+
+.explr-ie ol,
+.explr-ie ul {
+	overflow: hidden;
+}
+
+.explr-ie {
+	padding-top: 20px;
+}
+
+.explr-ie .explr-line, 
+.explr-ie .explr-plus {
+	top: 0;
+	left: 4px;
+}
+
+.explr-ie li {
+	height: auto !important;
+	height: 24px;
+	*padding-top: 12px;
+	_padding-top: 0;
+}
+
+.explr-ie li a {
+	*position: absolute;
+	_position: static;
+	*top: 0;
+	_top: auto;
+}
